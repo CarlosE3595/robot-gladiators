@@ -66,12 +66,18 @@ var fight = function(enemyName) {
       window.alert(playerName + ' still has ' + playerHealth + ' health left.');
     }
   } // end of while loop
-}; // end of fight functions
+}; // end of fight function
 
 
 
 for(var i = 0; i < enemyNames.length; i++) {
+  if (playerHealth <= 0) {
   var pickedEnemyName = enemyNames[i];
   enemyHealth = 50;
   fight(pickedEnemyName);
+  }
+  else {
+    window.alert('You have lost your robot in battle! Game Over!');
+    break;
+  }
 }
